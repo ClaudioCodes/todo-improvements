@@ -1,10 +1,73 @@
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
 h1{
-    color: red;
 }
+
+body {
+     background-color: black;
+     height:1200px;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+
+}
+
+footer {
+
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
 .completed{
-    text-decoration: line-through;
-    color: gray;
+     text-decoration: line-through;
+     color: gray;
 }
+
 .not{
-    text-decoration: underline;
+     text-decoration: underline;
+}
+
+.center{    
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+/******************************************
+/* INDEX PAGE STYLES
+/*******************************************/
+.index-h1-section{
+     height:50%;
+     padding: 20px;
+}
+
+.index-h1{
+     color:white;
+     font-size: 4em;
+}
+
+.index-a{
+     color:white;
+     padding: 20px;
+}
+
+@keyframes fadeInDown {
+     0% {
+          transform: scale3d(.75,.75,1);
+          opacity: 0;
+     }
+     100% {
+          transform: scale3d(1,1,1);;
+          opacity: 1;
+     }
+}
+   
+.fadeInDown-animation {
+     animation: 4s fadeInDown;
 }
