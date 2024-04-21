@@ -21,6 +21,41 @@ footer {
 
 }
 
+input{
+     text-align: center;
+     width:200px;
+}
+
+@keyframes fadeIn {
+     0% {
+          transform: scale3d(.75,.75,1);
+          opacity: 0;
+     }
+     100% {
+          transform: scale3d(1,1,1);;
+          opacity: 1;
+     }
+}
+   
+.fadeIn-animation {
+     animation: 4s fadeInDown;
+}
+
+@keyframes fadeInDown {
+     0% {
+          transform: scale3d(.75,.75,1);
+          opacity: 0;
+     }
+     100% {
+          transform: scale3d(1,1,1);;
+          opacity: 1;
+     }
+}
+   
+.fadeInDown-animation {
+     animation: 4s fadeInDown;
+}
+
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
@@ -43,7 +78,7 @@ footer {
 /* INDEX PAGE STYLES
 /*******************************************/
 .index-h1-section{
-     height:50%;
+     height:70%;
      padding: 20px;
 }
 
@@ -57,17 +92,24 @@ footer {
      padding: 20px;
 }
 
-@keyframes fadeInDown {
-     0% {
-          transform: scale3d(.75,.75,1);
-          opacity: 0;
-     }
-     100% {
-          transform: scale3d(1,1,1);;
-          opacity: 1;
-     }
+
+
+/******************************************
+/* SIGN UP PAGE STYLES
+/*******************************************/
+
+.signup-h1{
+     color:white;
+     padding:20px;
+     width:300px;
+     text-align: center;
 }
-   
-.fadeInDown-animation {
-     animation: 4s fadeInDown;
+
+.signup-input{
+     padding:20px;
 }
+
+.signup-form{
+     margin-top: 200px;
+}
+
