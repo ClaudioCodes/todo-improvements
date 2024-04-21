@@ -26,19 +26,36 @@ input{
      width:200px;
 }
 
-@keyframes fadeIn {
+@keyframes fadeInLeft {
      0% {
-          transform: scale3d(.75,.75,1);
+          transform: translate(-50px);
           opacity: 0;
      }
      100% {
-          transform: scale3d(1,1,1);;
+          transform: translate(0);
           opacity: 1;
      }
 }
    
-.fadeIn-animation {
-     animation: 4s fadeInDown;
+.fadeInLeft-animation {
+     animation: 1s fadeInLeft;
+}
+
+@keyframes fadeInRight {
+     0% {
+          visibility: visible;
+          transform: translate(50px);
+          opacity: 0;
+     }
+     100% {
+          visibility: visible;
+          transform: translate(0);
+          opacity: 1;
+     }
+}
+   
+.fadeInRight-animation {
+     animation: 1s fadeInRight;
 }
 
 @keyframes fadeInDown {
@@ -47,7 +64,7 @@ input{
           opacity: 0;
      }
      100% {
-          transform: scale3d(1,1,1);;
+          transform: scale3d(1,1,1);
           opacity: 1;
      }
 }
@@ -92,8 +109,6 @@ input{
      padding: 20px;
 }
 
-
-
 /******************************************
 /* SIGN UP PAGE STYLES
 /*******************************************/
@@ -105,11 +120,20 @@ input{
      text-align: center;
 }
 
-.signup-input{
-     padding:20px;
-}
-
 .signup-form{
      margin-top: 200px;
 }
 
+.signup-visible{
+     visibility: visible !important; 
+}
+
+.signup-invisible{
+     visibility: hidden;
+}
+/******************************************
+/* LOG IN PAGE STYLES
+/*******************************************/
+.login-form{
+     margin-top: 400px; 
+}

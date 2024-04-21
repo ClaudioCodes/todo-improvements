@@ -4,23 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Go get!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>Task Tracker Log In</title>
 </head>
 <body>
     <% if (locals.messages.errors) { %>
         <% messages.errors.forEach( el => { %>
-            <div class="alert alert-danger"><%= el.msg %></div>
+            <div class="alert alert-danger center"><%= el.msg %></div>
         <% }) %>    
     <% } %>
     <% if (locals.messages.info) { %>
         <% messages.info.forEach( el => { %>
-            <div class="alert alert-danger"><%= el.msg %></div>
+            <div class="alert alert-danger center"><%= el.msg %></div>
         <% }) %>    
     <% } %>
-    <form action="/login" method="POST">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <input type="submit">
+    <form class="login-form"action="/login" method="POST">
+        <section class="center">
+            <input class= "fadeInDown-animation" type="email" name="email" placeholder="Email">
+        </section>
+        <section class="center">
+            <input class= "fadeInDown-animation" type="password" name="password" placeholder="Password">
+        </section>
+        <section class="center">
+            <input class= "fadeInDown-animation" stype="submit">
+        </section>
     </form>
+    <a class="center fadeInDown-animation" href="/">Back to Main Page</a>
 </body>
 </html>

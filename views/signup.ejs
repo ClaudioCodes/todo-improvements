@@ -8,33 +8,39 @@
     <link rel="stylesheet" href="css/normalize.css">
     <title>Task Tracker Sign Up</title>
 </head>
+
 <body>
     <% if (locals.messages.errors) { %>
         <% messages.errors.forEach( el => { %>
-            <div class="alert alert-danger"><%= el.msg %></div>
+            <div class="alert alert-danger center"><%= el.msg %></div>
         <% }) %>    
     <% } %>
     <form class="signup-form" action="/signup" method="POST">
         <section class="center">
-            <h1 class="signup-h1">Crate a User Name</h1>
-            <input type="text" name="userName" placeholder="User Name">
+            <h1 class="signup-h1 signup-invisible">Crate a User Name</h1>
+            <input class="signup-invisible" type="text" name="userName" placeholder="User Name">
         </section>
         <section class="center">
-            <h1 class="signup-h1">Email Address</h1>
-            <input type="email" name="email" placeholder="Email">
+            <h1 class="signup-h1 signup-invisible">Email Address</h1>
+            <input class="signup-invisible" type="email" name="email" placeholder="Email">
         </section>
         <section class="center">
-            <h1 class="signup-h1">Password</h1>
-            <input type="password" name="password" placeholder="Password">
+            <h1 class="signup-h1 signup-invisible">Password</h1>
+            <input class="signup-invisible" type="password" name="password" placeholder="Password">
         </section>
         <section class="center">
-            <h1 class="signup-h1">Confirm Password</h1> 
-            <input type="password" name="confirmPassword" placeholder="Confirm Password">
+            <h1 class="signup-h1 signup-invisible">Confirm Password</h1> 
+            <input class="signup-invisible" type="password" name="confirmPassword" placeholder="Confirm Password">
         </section>
         <section class="center">
-            <h1 class="signup-h1">Submit</h1> 
-            <input type="submit">
+            <h1 class="signup-h1 signup-invisible">Submit</h1> 
+            <input class="signup-invisible" type="submit">
         </section> 
     </form>
+    <a class="center fadeInDown-animation" href="/">Back to Main Page</a>
+
+    <script src="js/signup-load.js"></script>
 </body>
 </html>
+<!--Todo:
+complete transition styles on signup page-->
