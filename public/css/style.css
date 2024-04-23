@@ -7,7 +7,7 @@ h1{
 
 body {
      background-color: black;
-     height:1200px;
+     height:100%;
 }
 
 /******************************************
@@ -144,4 +144,36 @@ input{
 .error{
      color:red;
      font:bold;
+}
+
+/******************************************
+/* TODOS PAGE STYLES
+/*******************************************/
+.todo-h1{
+     color:white;
+     font:bold;
+     vertical-align: top;
+}
+
+.todo-ul{
+     color:white;
+}
+
+.todo-section{
+     height: auto;
+     text-align: center;
+     padding:40px;
+     width: 400px;
+}
+
+.todo-h2 {
+     padding:5px 40px;
+     color:white;
+     width: 400px;
+     text-align: center;
+}
+
+.todo-center{    
+     display: flex;
+     justify-content: center;
 }

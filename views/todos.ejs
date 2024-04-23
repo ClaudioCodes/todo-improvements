@@ -4,29 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Todo Task List</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
-    <h1>Todos</h1>
-    <ul>
-    <% todos.forEach( el => { %>
-            <li class='todoItem' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
-                <span class='del'> Delete </span>
-            </li>
-    <% }) %>    
-    </ul>
+    <h1 class="todo-h1 center">Task Tracker</h1>
+    <section class="todo-center">
+        <section class="todo-section">
+            <h1 class="todo-h1">Pending to Complete</h1>
+            <ul>
+            <% todos.forEach( el => { %>
+                <%if (!el.completed) { %>
+                    <li class='todoItem todo-ul' data-id='<%=el._id%>'>
+                        <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+                        <span class='del'> Delete </span>
+                    </li>
+                <% } %>
+            <% }) %>    
+            </ul>
+        </section>
+        
+        <section class="todo-section">
+            <h1 class="todo-h1">Completed</h1>
+            <ul>
+            <% todos.forEach( el => { %>
+                <%if (el.completed) { %>
+                    <li class='todoItem todo-ul center' data-id='<%=el._id%>'>
+                        <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+                        <span class='del'> Delete </span>
+                    </li>
+                <% } %>
+            <% }) %>    
+            </ul>
 
-    <h2><%= user.userName %> has <%= left %> things left to do.</h2>
+        </section>
 
-    <form action="/todos/createTodo" method='POST'>
-        <input type="text" placeholder="Enter Todo Item" name='todoItem'>
-        <input type="submit">
-    </form>
+    </section>
+    <section class="center">
+        <h2 class="todo-h2">Tasks left for <%= user.userName %>: <%= left %></h2>
+        <h2 class="todo-h2">Tasks completed for <%= user.userName %>: <%= complete %></h2>
+    </section>
 
-    <a href="/logout">Logout</a>
+
+    <secttion classs="center">
+        <form class ="center" action="/todos/createTodo" method='POST'>
+            <input type="text" placeholder="Enter Todo Item" name='todoItem'>
+            <input type="submit">
+        </form>
+    </secttion>
+
+
+    <a class="center" href="/logout">Logout</a>
 
     <script src="js/main.js"></script>
 </body>
