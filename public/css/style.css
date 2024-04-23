@@ -137,3 +137,11 @@ input{
 .login-form{
      margin-top: 400px; 
 }
+
+/******************************************
+/* LOG IN PAGE STYLES
+/*******************************************/
+.error{
+     color:red;
+     font:bold;
+}

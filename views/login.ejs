@@ -11,12 +11,12 @@
 <body>
     <% if (locals.messages.errors) { %>
         <% messages.errors.forEach( el => { %>
-            <div class="alert alert-danger center"><%= el.msg %></div>
+            <div class="alert alert-danger center error"><%= el.msg %></div>
         <% }) %>    
     <% } %>
     <% if (locals.messages.info) { %>
         <% messages.info.forEach( el => { %>
-            <div class="alert alert-danger center"><%= el.msg %></div>
+            <div class="alert alert-danger center error"><%= el.msg %></div>
         <% }) %>    
     <% } %>
     <form class="login-form"action="/login" method="POST">
@@ -27,7 +27,7 @@
             <input class= "fadeInDown-animation" type="password" name="password" placeholder="Password">
         </section>
         <section class="center">
-            <input class= "fadeInDown-animation" stype="submit">
+            <input class= "fadeInDown-animation" type="submit">
         </section>
     </form>
     <a class="center fadeInDown-animation" href="/">Back to Main Page</a>
